@@ -90,6 +90,23 @@ Then when you start control, you'd do something like:
 }
 ```
 
+### Controlling your objects
+
+Once you have movement you can control whatever sprite you'd like probably from the update method.
+
+For example if you wanted to move a ship you could do something like this during the update method:
+
+```objc
+if ( moveJoystick.isMoving ){
+    CGPoint adjustedSpritePosition = CGPointMake(sprite.position.x + moveJoystick.moveSize.width, sprite.position.y + moveJoystick.moveSize.height);
+    sprite.position = adjustedSpritePosition;
+}
+```
+
+It'll adjust the ships position based on it's current location plus the movement size from the controller
+
+You could also read the registered angle to apply something at an angle.  See the sample code on how to shoot objects at that angle.
+
 ### Properties
 
 #### isMoving
