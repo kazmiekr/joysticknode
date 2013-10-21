@@ -136,3 +136,9 @@ The angle being reported by the movment of the inner circle.  0 is directly to t
 #### defaultAngle
 
 The angle to report if there is no movement, the control will reset to this
+
+### Screenshots
+
+![ScreenShot](https://raw.github.com/kazmiekr/joysticknode/master/dynamic.png)
+
+![ScreenShot](https://raw.github.com/kazmiekr/joysticknode/master/fixed.png)
