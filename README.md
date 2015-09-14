@@ -10,7 +10,7 @@ The sample application shows how to use them in a simple move/shoot scenario sim
 KAZ_JoystickNode *moveJoystick = [[KAZ_JoystickNode alloc] init];
 [moveJoystick setOuterControl:@"outer" withAlpha:0.25];
 [moveJoystick setInnerControl:@"inner" withAlpha:0.5];
-moveJoystick.speed = 8;
+moveJoystick.movePoints = 8;
 [self addChild:moveJoystick];
 ```
 
@@ -68,7 +68,7 @@ To have a fixed control, you'd follow the same flow except configure it a bit di
 KAZ_JoystickNode *moveJoystick = [[KAZ_JoystickNode alloc] init];
 [moveJoystick setOuterControl:@"outer" withAlpha:0.25];
 [moveJoystick setInnerControl:@"inner" withAlpha:0.5 withName:@"MoveJoystick"];
-moveJoystick.speed = 8;
+moveJoystick.movePoints = 8;
 moveJoystick.autoShowHide = NO;
 moveJoystick.position = CGPointMake(150, 150);
 [self addChild:moveJoystick];
@@ -125,9 +125,9 @@ The size of the movement the control calculates.  Based on the speed and angle, 
 
 The touch to register movement with the control
 
-#### speed
+#### movePoints
 
-The amount you want to adjust the move size by.  Will be scaled based on the distance from the center point to the outer ring
+The amount you want to adjust the object speed by.  Will be scaled based on the distance from the center point to the outer ring
 
 #### angle
 
