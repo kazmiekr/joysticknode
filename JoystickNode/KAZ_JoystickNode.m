@@ -78,7 +78,7 @@
     // Get the outer ring radius
     float outerRadius = outerControl.size.width / 2;
     
-    float movePoints = self.speed;
+    float movePoints = self.movePoints;
     // Get the change in X
     float deltaX = location.x - startPoint.x;
     // Get the change in Y
@@ -95,7 +95,7 @@
     if ( distance < outerRadius ){
         // If the distance is less than the radius, it moves freely
         innerControl.position = [touch locationInNode:self];
-        movePoints = distance / outerRadius * self.speed;
+        movePoints = distance / outerRadius * self.movePoints;
     } else {
         // If the distance is greater than the radius, we'll lock it to bounds of the outer size radius
         float maxY = outerRadius * sinf(radians);
@@ -104,7 +104,7 @@
             maxX *= -1;
         }
         innerControl.position = CGPointMake(maxX, maxY);
-        movePoints = self.speed;
+        movePoints = self.movePoints;
     }
     
     // Calculate Y Movement

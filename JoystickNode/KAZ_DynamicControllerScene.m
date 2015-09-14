@@ -42,7 +42,7 @@
         moveJoystick = [[KAZ_JoystickNode alloc] init];
         [moveJoystick setOuterControl:@"outer" withAlpha:0.25];
         [moveJoystick setInnerControl:@"inner" withAlpha:0.5];
-        moveJoystick.speed = 8;
+        moveJoystick.movePoints = 8;
         [self addChild:moveJoystick];
         
         shootJoystick = [[KAZ_JoystickNode alloc] init];

@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
 
+	self.view.multipleTouchEnabled = YES;
+	
     // Configure the view.
     skView = (SKView *)self.view;
     skView.showsFPS = YES;

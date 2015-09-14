@@ -37,7 +37,7 @@
         moveJoystick = [[KAZ_JoystickNode alloc] init];
         [moveJoystick setOuterControl:@"outer" withAlpha:0.25];
         [moveJoystick setInnerControl:@"inner" withAlpha:0.5 withName:@"MoveJoystick"];
-        moveJoystick.speed = 8;
+        moveJoystick.movePoints = 8;
         moveJoystick.autoShowHide = NO;
         moveJoystick.position = CGPointMake(xOffset, yOffset);
         [self addChild:moveJoystick];

@@ -14,7 +14,7 @@
 @property (nonatomic, assign) BOOL autoShowHide;
 @property (nonatomic, assign) CGSize moveSize;
 @property (nonatomic, strong) UITouch *startTouch;
-@property (nonatomic, assign) float speed;
+@property (nonatomic, assign) float movePoints;
 @property (nonatomic, assign) float angle;
 @property (nonatomic, assign) float defaultAngle;
 
